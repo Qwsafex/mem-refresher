@@ -1,0 +1,12 @@
+<body>
+    <div align="center">
+        <p>{{question}}</p>
+        <form action="/" method="post">
+            <input name="answer" type="text">
+            <input name="question_id" type="hidden" value="{{question_id}}">
+            <input type="submit" value="Submit answer">
+        </form>
+        <p>{{prev_question}}</p>
+        <p>{{verdict}}</p>
+    </div>
+</body>
