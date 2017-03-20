@@ -1,0 +1,24 @@
+<body>
+  <table align="center">
+  {% for todo in todos %}
+    <tr>
+      <form method="POST">
+        <td>{{todo.text}}</td>
+        <td>{{todo.date}}</td>
+        <td>{{todo.days_left}} days {{todo.hours_left}} hours {{todo.minutes_left}} minutes</td>
+        <td>
+            <input type="hidden" name="todo_id" value="{{todo.id}}">
+            <input type="submit" name="action" value="Delete">
+        </td>
+      </form>
+    </tr>      
+  {% endfor %}
+    <tr>
+      <form method="POST">
+        <td><input type="text" name="text"></td>
+        <td><input type="text" name="date"></td>
+        <td><input type="submit" name="action" value="Add"></td>
+      </form>
+    </tr>      
+  </table>
+</body>
